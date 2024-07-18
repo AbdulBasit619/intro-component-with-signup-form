@@ -1,0 +1,107 @@
+.cta {
+  &__typography {
+    color: #fff;
+    max-width: 52rem;
+    justify-self: flex-end;
+
+    @include flexCenter;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media only screen and (max-width: 900px) {
+      justify-self: center;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  &__content {
+    justify-self: flex-start;
+
+    @include flexCenter;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: 900px) {
+      justify-self: center;
+    }
+  }
+
+  &__form {
+    background-color: #fff;
+    padding: 3rem 3.6rem;
+    border-radius: 8px;
+    width: 50rem;
+    box-shadow: 0 7px 0 0 rgba($color--dark_blue, 0.3);
+
+    @include flexCenter;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: 900px) {
+      width: 36rem;
+      padding: 1.8rem;
+    }
+
+    .container__input {
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 100%;
+        outline: none;
+        border: none;
+        background: none;
+        padding: 1.5rem 3rem;
+        border: 1px solid $color--grayish_blue;
+        border-radius: 4px;
+        font-family: $ff-poppins;
+        transition: all 0.3s;
+        font-weight: $fw--semibold;
+
+        @media only screen and (max-width: 900px) {
+          font-size: 1.3rem;
+        }
+
+        &::placeholder {
+          font-weight: inherit;
+          font-family: inherit;
+          font-size: inherit;
+        }
+
+        &:active,
+        &:focus {
+          border-color: $color--dark_blue;
+        }
+      }
+
+      .icon--error {
+        position: absolute;
+        top: 1.4rem;
+        right: 2.4rem;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      background: none;
+      border: none;
+      outline: none;
+      background-color: $color--green;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: $fw--semibold;
+      border-radius: 4px;
+      text-transform: uppercase;
+      padding: 1.6rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 -2px 2px 1px rgba($color--dark_blue, 0.2) inset;
+      transition: all 0.3s;
+
+      &:active {
+        background-color: rgba($color--green, 0.6);
+      }
+    }
+  }
+}
